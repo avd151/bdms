@@ -18,7 +18,6 @@
 
 <link rel="stylesheet" href="../icofont/icofont.min.css">
 
-
 </head>
 
 
@@ -31,7 +30,7 @@
 <div class="container-fluid">
 <div class="row">
 <div class=".col-lg-12">
-               <h1 class="page-header">Edit Campaign Details</h1>
+               <h1 class="page-header">NGO Details</h1>
                 </div>
   </div>  
 
@@ -39,7 +38,7 @@
                         <div class=".col-lg-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    Total Records of available campaign
+                                    Total Records of available NGOs
                                 </div>
 								
 								 <div class="panel-body">
@@ -50,32 +49,30 @@
 
 						include "dbconnect.php";
 
-						$qry="select * from campaigndb";
+						$qry="select * from ngo";
 						$result=mysqli_query($conn,$qry);
 
 
 						echo"
 						<thead>
-												
 						<tr>
-						<th>Campaign Name</th>
-						<th>Organizer Name</th>
-						<th>Phone Number</th>
-						<th>Date of campaign</th>
-						<th>Description</th>
-						<th><i class='fa fa-pencil'></i></th>
-					</tr>
+							<th>Name</th>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Address</th>
+							<th>Contact</th>
+						</tr>
 						</thead>";
 
 						while($row=mysqli_fetch_array($result)){
 						  echo"<tbody>
 						  <tr>
-						  <td>".$row['cname']."</td>
-						  <td>".$row['oname']."</td>
-						  <td>".$row['phn']."</td>
-						  <td>".$row['cdate']."</td>
-						  <td>".$row['descp']."</td>
-						  <td><a href='updatecampaignform.php?id=".$row['id']."'><i class='fa fa-edit' style='color:green'></i></a></td>
+						  <td>".$row['name']."</td>
+						  <td>".$row['username']."</td>
+						  <td>".$row['email']."</td>
+						  <td>".$row['address']."</td>
+						  <td>".$row['contact']."</td>
+
 						</tr>
 						</tbody>";
 						}
@@ -93,8 +90,6 @@
 
 </div>
 
-
-
   <!-- jQuery -->
   <script src="../vendor/jquery/jquery.min.js"></script>
 
@@ -107,5 +102,5 @@
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
 
-</body>
+</body>	
 </html>

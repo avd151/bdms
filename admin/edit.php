@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,12 +32,12 @@
 
     <div id="wrapper">
 
-        <?php include 'includes/nav.php'?>
+        <?php include 'includes/nav.php' ?>
 
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">BBMS</h1>
+                    <h1 class="page-header">BDMS</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -55,38 +53,38 @@
                                 <div class="col-lg-6">
                                     <form role="form" action="#" method="post">
 
-<?php
+                                        <?php
 
-				include 'dbconnect.php';
+                                        include 'dbconnect.php';
 
-				$name = $_POST["name"];    
-				$guardiansname = $_POST["guardiansname"];
-				$gender = $_POST["gender"];
-				$dob = $_POST["dob"];
-				$weight = $_POST["weight"];
-				$bloodgroup = $_POST["bloodgroup"];
-				$email = $_POST["email"];
-				$address = $_POST["address"];
-				$contact = $_POST["contact"];
-				$id=$_POST['id'];
-				//update query
-				$qry = "update donor set name='$name', guardiansname='$guardiansname', gender='$gender', dob='$dob', weight='$weight', bloodgroup='$bloodgroup', email='$email', address='$address', contact='$contact' where id='$id'";
-				$result = mysqli_query($conn,$qry); //query executes
+                                        $name = $_POST["name"];
+                                        $guardiansname = $_POST["guardiansname"];
+                                        $gender = $_POST["gender"];
+                                        $dob = $_POST["dob"];
+                                        $weight = $_POST["weight"];
+                                        $bloodgroup = $_POST["bloodgroup"];
+                                        $email = $_POST["email"];
+                                        $address = $_POST["address"];
+                                        $contact = $_POST["contact"];
+                                        $id = $_POST['id'];
+                                        //update query
+                                        $qry = "update donor set name='$name', guardiansname='$guardiansname', gender='$gender', dob='$dob', weight='$weight', bloodgroup='$bloodgroup', email='$email', address='$address', contact='$contact' where id='$id'";
+                                        $result = mysqli_query($conn, $qry); //query executes
 
-				if(!$result){
-					echo"ERROR". mysqli_error();
-				}else {
-					echo"SUCCESSFULLY UPDATED";
-					// header("Location:editview.php");
+                                        if (!$result) {
+                                            echo "ERROR" . mysqli_error();
+                                        } else {
+                                            echo "SUCCESSFULLY UPDATED";
+                                            // header("Location:editview.php");
 
-				}
+                                        }
 
 
-?>
+                                        ?>
 
-                                  </form>
+                                    </form>
                                 </div>
-                                
+
                             </div>
                             <!-- /.row (nested) -->
                         </div>
@@ -116,27 +114,5 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
-
-<footer>
-        <p>&copy; <?php echo date("Y"); ?>: Developed By Naseeb Bajracharya</p>
-    </footer>
-	
-	<style>
-	footer{
-   background-color: #424558;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 35px;
-    text-align: center;
-    color: #CCC;
-}
-
-footer p {
-    padding: 10.5px;
-    margin: 0px;
-    line-height: 100%;
-}
-	</style>
 
 </html>

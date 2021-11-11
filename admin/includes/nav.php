@@ -69,7 +69,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href=""><i class="fas fa-user-shield"></i> Manage Donors<span class="fa arrow"></span></a>
+                    <a href=""><i class="fa fa-user"></i> Manage Donors<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="adddonor.php"><i class="fa fa-table fa-user-plus"></i> Add Donor</a>
@@ -86,10 +86,19 @@
                     </ul>
                 </li>
                 <li>
-                    <a href=""><i class="fas fa-hospital"></i> Manage NGOs <span class="fa arrow"></span></a>
+                    <a href=""><i class="fa fa-table"></i> Manage NGOs <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="addngo.php"><i class="fa fa-table fa-user-plus"></i> Add NGO</a>
+                            <a href="addngo.php"><i class="fa fa-table fa-user-plus"></i> Add NGO Details</a>
+                        </li>
+                        <li>
+                            <a href="viewngo.php"><i class="fa fa-edit fa-eye"></i> View NGOs Details</a>
+                        </li>
+                        <li>
+                            <a href="addngo.php"><i class="fa fa-edit fa-fw"></i> Edit NGO Details</a>
+                        </li>
+                        <li>
+                            <a href="deletengo.php"><i class="fa fa-user-times"></i> Delete NGO Details</a>
                         </li>
                     </ul>
                 </li>
@@ -97,34 +106,34 @@
                     <a href=""><i class="fa fa-bullhorn"></i> Manage Announcements <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="makeannouncement.php">Make Announcement</a>
+                            <a href="makeannouncement.php"><i class="fa fa-table fa-user-plus"></i> Make Announcement</a>
                         </li>
                         <li>
-                            <a href="viewannouncement.php">View Announcement</a>
+                            <a href="viewannouncement.php"><i class="fa fa-edit fa-eye"></i> View Announcements</a>
                         </li>
                         <li>
-                            <a href="editannounceform.php">Edit Announcement</a>
+                            <a href="editannounceform.php"><i class="fa fa-edit fa-fw"></i> Edit Announcement</a>
                         </li>
                         <li>
-                            <a href="deleteannouncement.php">Remove Announcement</a>
+                            <a href="deleteannouncement.php"><i class="fa fa-user-times"></i> Delete Announcement</a>
                         </li>
                     </ul>
                 </li>
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-flag"></i>Manage Campaigns <span class="fa arrow"></span></a>
+                    <a href=""><i class="fa fa-flag"></i> Manage Campaigns <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="newcampaign.php">New Campaign</a>
+                            <a href="newcampaign.php"><i class="fa fa-table fa-user-plus"></i> New Campaign</a>
                         </li>
                         <li>
-                            <a href="viewcampaign.php">View Campaign</a>
+                            <a href="viewcampaign.php"><i class="fa fa-edit fa-eye"></i> View Campaigns</a>
                         </li>
                         <li>
-                            <a href="updatecampaign.php">Update Campaign</a>
+                            <a href="updatecampaign.php"><i class="fa fa-edit fa-fw"></i> Edit Campaign</a>
                         </li>
                         <li>
-                            <a href="deletedcampaign.php">Delete Campaign</a>
+                            <a href="deletedcampaign.php"><i class="fa fa-user-times"></i> Delete Campaign</a>
                         </li>
                     </ul>
                 </li>

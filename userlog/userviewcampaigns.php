@@ -49,8 +49,7 @@
 									
 									<?php
 
-						include "../pages/dbconnect.php";
-
+						include("../admin/dbconnect.php");
 						$qry="select * from campaigndb";
 						$result=mysqli_query($conn,$qry);
 
