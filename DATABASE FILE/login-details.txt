@@ -1,0 +1,12 @@
+**Database Name: bdms**
+
+**Admin Login Details**
+
+Username: admin
+Password: admin
+
+
+**Donor Login Details**
+
+Username: demo1
+Password: demo1
