@@ -95,7 +95,7 @@
                             <a href="viewngo.php"><i class="fa fa-edit fa-eye"></i> View NGOs Details</a>
                         </li>
                         <li>
-                            <a href="addngo.php"><i class="fa fa-edit fa-fw"></i> Edit NGO Details</a>
+                            <a href="editngoview.php"><i class="fa fa-edit fa-fw"></i> Edit NGO Details</a>
                         </li>
                         <li>
                             <a href="deletengo.php"><i class="fa fa-user-times"></i> Delete NGO Details</a>

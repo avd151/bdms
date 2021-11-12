@@ -15,8 +15,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
+                <!-- <li><a href="about.php">About Us</a></li>
+                <li><a href="contact.php">Contact Us</a></li> -->
                 <li><a href="usersignup.php">User Sign-Up</a></li>
                 <li><a href="userlogin.php">User Login</a></li>
                 <li><a href="adminlogin.php">Admin Login</a></li>
@@ -36,12 +36,6 @@
                     </ul>
                 </li> -->
             </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
         </div><!-- /.navbar-collapse -->
 
     </div><!-- /.container-fluid -->

@@ -57,7 +57,6 @@
 						<thead>
 						<tr>
 							<th>Name</th>
-							<th>Username</th>
 							<th>Email</th>
 							<th>Address</th>
 							<th>Contact</th>
@@ -68,7 +67,6 @@
 						  echo"<tbody>
 						  <tr>
 						  <td>".$row['name']."</td>
-						  <td>".$row['username']."</td>
 						  <td>".$row['email']."</td>
 						  <td>".$row['address']."</td>
 						  <td>".$row['contact']."</td>

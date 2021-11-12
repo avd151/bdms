@@ -1,4 +1,3 @@
-
 <?php include('dbcon.php');
 include('includes/header.php');
 ?>
@@ -18,23 +17,27 @@ include('includes/header.php');
 </head>
 
 <body>
-    
-    <?php 
+
+    <?php
     include('includes/navbar.php');
     ?>
-    <h1>This is home page</h1>
-
-
-
-
-
+    <div class="container-fluid h-100 bg-grey">
+        <div class="row">
+            <div class="title text-white text-center my-3">
+                <h1>Donate Blood to Save Lives!</h1>
+                <p>Your drop of blood can build an ocean of happiness!</p>
+                <a type="button" class="btn btn-success" target="_blank" href="usersignup.php">Register as Donor</a>
+            </div><!-- /.bg -->
+        </div>
+        <div class="container text-center ">
+            <img src="img/bg3.jpeg" alt="" style="width: 400px; height:fit-content">
+        </div>
+    </div>
 
 </body>
 
-<!-- Footer -->
-<?php
-include('includes/footer.php');
-?>
-<!-- Footer -->
+<!-- <?php
+        include('includes/footer.php');
+        ?> -->
 
 </html>

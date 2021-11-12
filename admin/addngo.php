@@ -39,83 +39,66 @@
 
     <div id="wrapper">
 
-    <?php include 'includes/nav.php'?>
+        <?php include 'includes/nav.php' ?>
 
         <div id="page-wrapper">
             <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Add NGO's Detail</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Please fill up the form below:
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form" action="added.php" method="post">
-                                     
-                                        <div class="form-group">
-                                            <label>Enter Full Name of NGO</label>
-                                            <input class="form-control" name="name" type="text" placeholder="Samajseva NGO" required>
-                                        </div>
-                                    
-                                        <div class="form-group">
-                                            <label>Enter Email Id</label>
-                                            <input class="form-control" type="email" placeholder="Enter Email Id" name="email" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Enter Address</label>
-                                            <input class="form-control" type="text" placeholder="Enter Address Here" name="address" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Enter Contact Number</label>
-                                            <input class="form-control" type="number" placeholder="Contact Number" name="contact" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Enter Username</label>
-                                            <input class="form-control" placeholder="Enter Here" name="username" required>
-                                            <p class="help-block">In order to create ngo's account.</p>
-                                            <p class="help-block">Example: harry20</p>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Enter Password</label>
-                                            <input class="form-control" name="password" type="password" id="myInput" required>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" onclick="myFunction()">Show Password
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-success" class="btn btn-success" style="border-radius:0%";>Submit Form</button>
-
-                
-                                    </form>
-
-
-                                </div>                      
-
-                            </div>
-                            <!-- /.row (nested) -->
-                        </div>
-                        <!-- /.panel-body -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Add NGO's Detail</h1>
                     </div>
-                    <!-- /.panel -->
+                    <!-- /.col-lg-12 -->
                 </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Please fill up the form below:
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <form role="form" action="addedngo.php" method="post">
+
+                                            <div class="form-group">
+                                                <label>Enter NGO Name</label>
+                                                <input class="form-control" name="name" type="text" placeholder="Example:Samajseva NGO" required>
+                                            </div>
+                                
+                                            <div class="form-group">
+                                                <label>Enter Email Id</label>
+                                                <input class="form-control" type="email" placeholder="Enter Email Id" name="email" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Enter Address</label>
+                                                <input class="form-control" type="text" placeholder="Enter Address Here" name="address" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Enter Contact Number</label>
+                                                <input class="form-control" type="number" placeholder="Contact Number" name="contact" required>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-success" class="btn btn-success" style="border-radius:0%" ;>Submit Form</button>
+
+
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
             </div>
             <!-- /.containerfluid -->
         </div>
@@ -126,14 +109,14 @@
 
     <script>
         function myFunction() {
-          var x = document.getElementById("myInput");
-          if (x.type === "password") {
-            x.type = "text";
-          } else {
-            x.type = "password";
-          }
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         }
-        </script>
+    </script>
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -148,4 +131,5 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
+
 </html>

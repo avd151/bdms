@@ -13,7 +13,6 @@
 <!-- Custom Fonts -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css" rel="stylesheet" type="text/css">
 
-
 <!-- jQuery -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 

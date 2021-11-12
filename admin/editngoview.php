@@ -2,6 +2,7 @@
 
 <head>
 
+
     <title>BDMS</title>
 
     <!-- Bootstrap Core CSS -->
@@ -30,7 +31,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class=".col-lg-12">
-                        <h1 class="page-header">Delete NGO Detail</h1>
+                        <h1 class="page-header">Edit NGO's Detail</h1>
                     </div>
                 </div>
 
@@ -38,7 +39,7 @@
                     <div class=".col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Total Records of available NGO's
+                                Total Records of available NGOs
                             </div>
 
                             <div class="panel-body">
@@ -71,7 +72,7 @@
 						  <td>" . $row['email'] . "</td>
 						  <td>" . $row['address'] . "</td>
 						  <td>" . $row['contact'] . "</td>
-						  <td><a href='deletengoutil.php?id=" . $row['id'] . "'><i class='fa fa-trash' style='color:red'></i></a></td>
+						  <td><a href='editngoform.php?id=" . $row['id'] . "'><i class='fa fa-edit' style='color:green'></i></a></td>
 
 						</tr>
 						</tbody>";

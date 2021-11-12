@@ -54,7 +54,7 @@
                     <a href="userviewblood.php"><i class="fa fa-heartbeat"></i> View All Donors </a>
                 </li>
                 <li>
-                    <a href="searchdonors.php"><i class="fa fa-flag"></i> Search Donors </a>
+                    <a href="usersearchdonors.php"><i class="fa fa-flag"></i> Search Donors </a>
 
                 </li>
 
