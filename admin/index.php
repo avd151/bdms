@@ -2,17 +2,18 @@
 
 session_start();
 //the isset function to check username is already loged in and stored on the session
-if(!isset($_SESSION['user_id'])){
-header('location:../index.php');	
+if (!isset($_SESSION['user_id'])) {
+    header('location:../index.php');
 }
 
 include "dbconnect.php";
-$qry="SELECT bloodgroup, count(*) as number FROM blood GROUP BY bloodgroup";
-$result= mysqli_query($conn,$qry);
+$qry = "SELECT bloodgroup, count(*) as number FROM blood GROUP BY bloodgroup";
+$result = mysqli_query($conn, $qry);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="utf-8">
@@ -39,9 +40,9 @@ $result= mysqli_query($conn,$qry);
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="../icofont/icofont.min.css">
-	
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,30 +50,31 @@ $result= mysqli_query($conn,$qry);
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	<script type="text/javascript">  
-           google.charts.load('current', {'packages':['corechart']});  
-           google.charts.setOnLoadCallback(drawChart);  
-           function drawChart()  
-           {  
-                var data = google.visualization.arrayToDataTable([  
-                          ['Gender', 'Number'],  
-                          <?php  
-                          while($row = mysqli_fetch_array($result))  
-                          {  
-                               echo "['".$row["bloodgroup"]."', ".$row["number"]."],";  
-                          }  
-                          ?>  
-                     ]);  
-                var options = {  
-                      title: 'Total Available Blood According to Blood Groups',  
-                      is3D:true,  
-                      pieHole: 0.0 
-                     };  
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
-                chart.draw(data, options);  
-           }  
-           </script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Blood', 'Number'],
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "['" . $row["bloodgroup"] . "', " . $row["number"] . "],";
+                }
+                ?>
+            ]);
+            var options = {
+                title: 'Total Available Blood According to Blood Groups',
+                is3D: true,
+                pieHole: 0.0
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
 
 </head>
 
@@ -80,7 +82,7 @@ $result= mysqli_query($conn,$qry);
 
     <div id="wrapper">
 
-        <?php include 'includes/nav.php'?>
+        <?php include 'includes/nav.php' ?>
 
         <div id="page-wrapper">
             <div class="row">
@@ -99,16 +101,16 @@ $result= mysqli_query($conn,$qry);
                                     <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                     
-                                <!-- in order to count total donor's record -->
-                                        <?php include 'counter/dashboardcount.php';?> 
+
+                                    <!-- in order to count total donor's record -->
+                                    <?php include 'counter/dashboardcount.php'; ?>
 
                                     <!-- <div class="huge">26</div> -->
                                     <div>Total Donors</div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <a href="viewdonor.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
@@ -123,13 +125,13 @@ $result= mysqli_query($conn,$qry);
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                <i class="icofont-blood icofont-5x"></i>
+                                    <i class="icofont-blood icofont-5x"></i>
                                     <!-- <i class="fa fa-heartbeat fa-5x"></i> -->
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <!-- in order to count total donor's record -->
-                                    <?php include 'counter/dashbloodcount.php';?> 
-                                    
+                                    <?php include 'counter/dashbloodcount.php'; ?>
+
                                     <div>Available Blood</div>
                                 </div>
                             </div>
@@ -151,7 +153,7 @@ $result= mysqli_query($conn,$qry);
                                     <i class="fa fa-bullhorn fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                <?php include 'counter/dashannouncecount.php';?>
+                                    <?php include 'counter/dashannouncecount.php'; ?>
                                     <div class="huge"> </div>
                                     <div>Announcement</div>
                                 </div>
@@ -171,17 +173,17 @@ $result= mysqli_query($conn,$qry);
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                <i class="icofont-blood-drop icofont-5x"></i>
+                                    <i class="icofont-blood-drop icofont-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">Donate</div>
-                                    <div>Blood</div>
+                                    <div class="huge"></div>
+                                    <div>Add Blood Details</div>
                                 </div>
                             </div>
                         </div>
                         <a href="addblood.php">
                             <div class="panel-footer">
-                                <span class="pull-left">Donate Blood Now!</span>
+                                <span class="pull-left">Add Blood Detail</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -191,34 +193,34 @@ $result= mysqli_query($conn,$qry);
             </div>
             <!-- /.row -->
             <div class="row">
-			
-				<div class=".col-lg-12">
-				
-				<div id="content">
-					 
-					  <div class="container-fluid">
-						
-						<div class="row-fluid">
-						  
-						  <div class="span12">
-							
-							<div id="piechart" style="width: 690px; height: 320px; margin-left:auto; margin-right:auto;"></div>  
 
-						  </div>
-						</div>
-					  </div>
-				</div>
-			
-				</div>
+                <div class=".col-lg-12">
 
-           </div>
-                <!-- /.col-lg-8 -->
-                
-                <!-- /.col-lg-4 -->
+                    <div id="content">
+
+                        <div class="container-fluid">
+
+                            <div class="row-fluid">
+
+                                <div class="span12">
+
+                                    <div id="piechart" style="width: 690px; height: 320px; margin-left:auto; margin-right:auto;"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-            <!-- /.row -->
+            <!-- /.col-lg-8 -->
+
+            <!-- /.col-lg-4 -->
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
@@ -241,4 +243,5 @@ $result= mysqli_query($conn,$qry);
     <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
+
 </html>

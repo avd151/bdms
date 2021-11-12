@@ -99,41 +99,42 @@
                                             include("../admin/dbconnect.php");
                                             $city_info = $_GET['city'];
                                             $blood_group_info = $_GET['blood_group'];
-                                            $qry = "select * from blood where address='$city_info' and bloodgroup='$blood_group_info'";
+                                            $qry = "select * from donor where address='$city_info' and bloodgroup='$blood_group_info'";
                                             $result = mysqli_query($conn, $qry);
 
 
                                             echo "
 						<thead>
 						<tr>
-							<th>Blood Group</th>
-							<th>Full Name</th>
+							<th>Name</th>
+							<th>Username</th>
+							<th>Guardian's Name</th>
 							<th>Gender</th>
 							<th>D.O.B</th>
 							<th>Weight</th>
+							<th>Blood Group</th>
+							<th>Email</th>
 							<th>Address</th>
 							<th>Contact</th>
-							<th>Blood Quantity</th>
-							<th>Collection Date</th>
 						</tr>
 						</thead>";
 
                                             while ($row = mysqli_fetch_array($result)) {
                                                 echo "<tbody>
-						  <tr class='gradeA'>
-						  <td>" . $row['bloodgroup'] . "</td>
+						  <tr>
 						  <td>" . $row['name'] . "</td>
+						  <td>" . $row['username'] . "</td>
+						  <td>" . $row['guardiansname'] . "</td>
 						  <td>" . $row['gender'] . "</td>
 						  <td>" . $row['dob'] . "</td>
 						  <td>" . $row['weight'] . "</td>
+						  <td>" . $row['bloodgroup'] . "</td>
+						  <td>" . $row['email'] . "</td>
 						  <td>" . $row['address'] . "</td>
 						  <td>" . $row['contact'] . "</td>
-						  <td>" . $row['bloodqty'] . "</td>
-						  <td>" . $row['collection'] . "</td>
 
 						</tr>
-						<tbody>
-						";
+						</tbody>";
                                             }
                                         }
 
