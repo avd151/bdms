@@ -22,10 +22,10 @@ Open XAMPP Control Panel and start running Apache and MySQL.\
 Open any web browser and go to the following URL - [http://localhost/bdms/](http://localhost/bdms/) to view the website.
 
 ## Screenshots
-<img src="https://github.com/avd151/bdms/blob/main/screenshots/home.png" width="500" height="500">
-<img src="https://github.com/avd151/bdms/blob/main/screenshots/register.png" width="100" height="100">
-<img src="https://github.com/avd151/bdms/blob/main/screenshots/ulogin.png" width="100" height="100">
-<img src="https://github.com/avd151/bdms/blob/main/screenshots/udashboard.png" width="100" height="100">
-<img src="https://github.com/avd151/bdms/blob/main/screenshots/adashboard.png" width="100" height="100">
-<img src="https://github.com/avd151/bdms/blob/main/screenshots/searchdonor.png" width="100" height="100">
-<img src="https://github.com/avd151/bdms/blob/main/screenshots/addngo.png" width="100" height="100">
+<img src="https://github.com/avd151/bdms/blob/main/screenshots/home.png">
+<img src="https://github.com/avd151/bdms/blob/main/screenshots/register.png">
+<img src="https://github.com/avd151/bdms/blob/main/screenshots/ulogin.png">
+<img src="https://github.com/avd151/bdms/blob/main/screenshots/udashboard.png">
+<img src="https://github.com/avd151/bdms/blob/main/screenshots/adashboard.png">
+<img src="https://github.com/avd151/bdms/blob/main/screenshots/searchdonor.png">
+<img src="https://github.com/avd151/bdms/blob/main/screenshots/addngo.png">
